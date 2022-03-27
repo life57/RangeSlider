@@ -1,0 +1,15 @@
+﻿<Window x:Class="Custom.Controls.RangeSlider.Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:Custom.Controls.RangeSlider;assembly=Custom.Controls.RangeSlider"
+        Title="MainWindow" Height="420" Width="525" Background="#FFB3B3B3">
+    <StackPanel>
+        <StackPanel Margin="11">
+            <c:SliderControl Name="RSlider" Background="Transparent" Height="320" Minimum="0" Maximum="100" Delta="1" LowerValue="0" UpperValue="100"></c:SliderControl>
+        </StackPanel>
+        <DockPanel Margin="11">
+            <TextBlock Width="121" Margin="11" Text="{Binding ElementName=RSlider, Path=LowerValue}"></TextBlock>
+            <TextBlock Width="121" Margin="11" HorizontalAlignment="Left" Text="{Binding ElementName=RSlider, Path=UpperValue}"></TextBlock>
+        </DockPanel>
+    </StackPanel>
+</Window>
